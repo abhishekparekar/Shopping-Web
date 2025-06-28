@@ -1,25 +1,73 @@
-.popular{
-    display: flex;
+.popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-height: 90vh;
+  padding: 0 20px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.popular h1 {
+  color: #171717;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.popular hr {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background: #252525;
+}
+
+/* Items container */
+.popular-item {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+/* ---------- Tablet View ---------- */
+@media (max-width: 1024px) {
+  .popular h1 {
+    font-size: 42px;
+  }
+
+  .popular hr {
+    width: 160px;
+  }
+}
+
+/* ---------- Mobile View ---------- */
+@media (max-width: 768px) {
+  .popular h1 {
+    font-size: 34px;
+  }
+
+  .popular hr {
+    width: 120px;
+  }
+
+  .popular-item {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    height: 90vh;
+    gap: 25px;
+  }
 }
 
-.popular h1{
-    color: #171717;
-    font-size: 50px;
-    font-weight: 600;
-}
-.popular hr{
-    width: 200px;
-    height: 6px;
-    border-radius: 10px;
-    background: #252525;
-}
+/* ---------- Extra Small Screens ---------- */
+@media (max-width: 480px) {
+  .popular h1 {
+    font-size: 28px;
+  }
 
-.popular-item{
-    margin-top: 50px;
-    display: flex;
-    gap: 30px;
+  .popular hr {
+    width: 100px;
+    height: 4px;
+  }
 }
